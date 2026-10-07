@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCure AI | Medical Image Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#">✚ MediCure AI</a>
+    <span>Medical Image Intelligence</span>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <span class="tag">AI-ASSISTED CLINICAL SUPPORT</span>
+
+      <h1>See More. Understand Better.</h1>
+
+      <p>
+        Medical image analysis designed to support healthcare professionals.
+      </p>
+    </section>
+
+
+    <section class="panel">
+
+      <h2>Patient Information</h2>
+
+      <div class="form-grid">
+
+        <label>
+          Patient ID
+          <input
+            id="patientId"
+            placeholder="Enter a demo ID"
+          >
+        </label>
+
+        <label>
+          Age
+          <input
+            id="age"
+            type="number"
+            min="0"
+            max="120"
+            placeholder="Age"
+          >
+        </label>
+
+      </div>
+
+      <label>
+        Clinical Notes
+        <textarea
+          id="notes"
+          placeholder="Enter relevant clinical notes..."
+        ></textarea>
+      </label>
+
+    </section>
+
+
+    <section class="panel">
+
+      <h2>Upload Medical Image</h2>
+
+      <p class="muted">
+        Supported formats: PNG, JPG, JPEG
+      </p>
+
+      <label class="upload-box" for="imageUpload">
+
+        <span class="upload-icon">↑</span>
+
+        <strong>Choose a medical image</strong>
+
+        <span class="muted">
+          Click here to browse your files
+        </span>
+
+      </label>
+
+      <input
+        id="imageUpload"
+        type="file"
+        accept="image/png,image/jpeg"
+        hidden
+      >
+
+      <div id="preview"></div>
+
+      <button id="analyzeBtn">
+        Prepare Analysis
+      </button>
+
+      <p id="status" aria-live="polite"></p>
+
+    </section>
+
+
+    <section class="panel">
+
+      <h2>Analysis Results</h2>
+
+      <p class="muted">
+        AI findings will appear here after your team's model is connected.
+      </p>
+
+      <div class="results-grid">
+
+        <div>
+
+          <h3>Original Image</h3>
+
+          <div id="original" class="image-box">
+            No image selected
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h3>AI Heatmap</h3>
+
+          <div id="heatmap" class="image-box">
+            Heatmap not available yet
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="finding">
+
+        <h3>Finding</h3>
+
+        <p id="finding">
+          Waiting for AI analysis
+        </p>
+
+
+        <h3>Confidence</h3>
+
+        <p id="confidence">
+          Not available
+        </p>
+
+
+        <h3>Location and Evidence</h3>
+
+        <p id="evidence">
+          No model evidence available yet.
+        </p>
+
+      </div>
+
+
+      <button id="reportBtn" class="secondary">
+        Download Demo Report
+      </button>
+
+    </section>
+
+
+    <footer>
+
+      <strong>Important medical notice</strong>
+
+      <p>
+        This prototype is not a diagnostic tool.
+        Findings require review by a qualified healthcare professional.
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
